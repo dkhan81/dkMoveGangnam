@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'gangnamapt.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #        'ENGINE': 'django.db.backends.sqlite3',
+        #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gangnamapt',
+        'USER': 'gangnampeople',
+        'PASSWORD': 'moveskill',
+        'HOST': '13.209.5.62',
+        'POST': '3306',
+
     }
 }
 
