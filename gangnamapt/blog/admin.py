@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import DkNote
+from .models import Post
 
-admin.site.register(DkNote)
+admin.site.register(Post)

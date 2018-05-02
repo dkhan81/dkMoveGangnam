@@ -1,0 +1,15 @@
+<h1>메모장</h1>
+<table>
+    <tr>
+        <th>작성자</th>
+        <th>내용</th>
+        <th>날짜</th>
+    </tr>
+    {% for item in note %}
+    <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.text}}</td>
+        <th>{{item.published_date}}</th>
+    </tr>
+    {% endfor %}
+</table>
