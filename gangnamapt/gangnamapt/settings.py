@@ -25,7 +25,7 @@ SECRET_KEY = '=_+$5qv9r)8z4t*)$=724xe+j0s(w5h6p^e=t1*)wmid)cjmn&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.209.5.62','127.0.0.1','localhost','ec2-13-209-5-62.ap-northeast-2.compute.amazonaws.com/']
+ALLOWED_HOSTS = ['13.209.21.6','127.0.0.1','localhost','ec2-13-209-5-62.ap-northeast-2.compute.amazonaws.com/']
 
 
 # Application definition
@@ -81,8 +81,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'gangnamapt',
         'USER': 'gangnampeople',
-        'PASSWORD': 'moveskill',
-        'HOST': '13.209.5.62',
+        'PASSWORD': 'gangnammove',
+        'HOST': '13.209.21.6',
         'POST': '3306',
 
     }
