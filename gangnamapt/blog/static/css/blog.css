@@ -1,4 +1,4 @@
-h1 a {
+h1 a, h2 a {
     color : #FCA205;
     /* font-family: 'Jeju Gothic', cursive; */
     font-family: 'Hanna', sans-serif;
@@ -27,7 +27,7 @@ body {
     float: right;
     /* background-color: #A2AAB0; */
     margin-top: 0;
-    margin-right: 30;
+    margin-right: 40;
     padding: 0px 0px 0px 0px;
 }
 
