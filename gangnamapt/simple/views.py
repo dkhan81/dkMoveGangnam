@@ -14,6 +14,6 @@ def hello(request) :
     people = {'name' : 'dk', 'age' : 20}
     return render(request, 'simple/hello.html', {'data' : people})
 
-def note(request):
+def note(request): 
     note = DkNote.objects.all().order_by('-published_date')
     return render(request, 'simple/note.html', {'note' : note})
