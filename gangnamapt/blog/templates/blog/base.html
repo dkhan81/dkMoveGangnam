@@ -6,15 +6,23 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet">
     </head>
     <body>
         <div class="page-header">
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
-            <h1><a href="/">DKhan Blog</a></h1>
+            <div class="page-sub-left-header">
+                <h1><a href="/">DKhan's Blog</a></h1>
+            </div>
+            <div class="page-sub-right-header">
+                <h2><a href="https://github.com/dkhan81" target="_blank">DKhan's Github</a></h2>
+                <h2><a href="https://github.com/dkhan81" target="_blank">DKhan's naver blog</a></h2>
+            </div>
         </div>
-        <div class="content container">
+        <div class="content-container">
             <div class="row">
                 <div class="col-md-8">
                 {% block content %}
