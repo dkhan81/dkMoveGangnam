@@ -6,4 +6,4 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Resume
-        fields = ('title', 'text', 'tech',)
+        fields = ('title', 'text', 'tech', 'emp_period')

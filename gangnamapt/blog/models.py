@@ -27,7 +27,8 @@ class Resume(models.Model):
     tech = models.TextField(max_length=10000, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    
+    emp_period = models.CharField(max_length=200, null=True)
+
     objects = models.Manager()
     def publish(self):
         self.published_date = timezone.now()
