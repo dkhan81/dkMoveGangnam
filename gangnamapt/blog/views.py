@@ -5,6 +5,8 @@ from django.shortcuts import redirect
 from .models import Post, Test, Resume
 from django.utils import timezone
 from .forms import PostForm
+from django.contrib.auth.decorators import login_required
+
 
 def post_list(request):
     posts = Resume.objects.all().order_by('published_date')
@@ -16,10 +18,12 @@ def note(request):
     return render(request, 'simple/note.html', {'note' : note})
 '''
 
+@login_required
 def post_detail(request, pk) :
     post = get_object_or_404(Resume, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
+@login_required
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -33,6 +37,7 @@ def post_new(request):
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
 
+@login_required
 def post_edit(request, pk):
     post = get_object_or_404(Resume, pk=pk)
     if request.method == "POST":
